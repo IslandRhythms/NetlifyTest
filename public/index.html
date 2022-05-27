@@ -4,7 +4,7 @@
 
 <script>
     function test() {
-        const result = fetch('/localhost:8888/.netlify/functions/hello-world').then((res) => {return res.json()});
+        const result = fetch('/.netlify/functions/hello-world').then((res) => {return res.json()}).then((response) => {return response.json()});
         console.log(result);
     }
 </script>
