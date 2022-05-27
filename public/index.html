@@ -1,1 +1,10 @@
 <h1>Hello World</h1>
+
+<button onclick="test()">CLICK ME</button>
+
+<script>
+    function test() {
+        const result = fetch('/localhost:8888/.netlify/functions/hello-world').then((res) => {return res.json()});
+        console.log(result);
+    }
+</script>
