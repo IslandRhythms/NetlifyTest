@@ -3,8 +3,8 @@
 <button onclick="test()">CLICK ME</button>
 
 <script>
-    function test() {
-        const result = fetch('/.netlify/functions/hello-world').then((res) => {return res.json()}).then((response) => {return response.json()});
+    async function test() {
+        const result = await fetch('/.netlify/functions/hello-world').then((res) => {return res.json()})//.then((response) => {return response});
         console.log(result);
     }
 </script>
